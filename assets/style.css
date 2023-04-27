@@ -1,0 +1,195 @@
+/***************
+    ROOT
+****************/
+:root{
+    --white: #F8F9FA;
+    --lightgray: #E5E5E5;
+    --dark-gray: #5B5858;
+    --orange: #FF8F00;
+    --darkblue: #051E34;
+    --blue: #1B72E8;
+    --shadow: #165BBA;
+    --salmon:#F26551;
+}
+
+
+
+/***************
+    NAVBAR
+****************/
+nav{
+    height: 70px;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.small{
+    height: 55px;
+    width: 55px;
+}
+
+.search-bars{
+    background-color: var(--lightgray);
+}
+
+.input-group-text{
+    background-color: var(--lightgray);
+}
+
+.icon{
+    color: var(--dark-gray);
+}
+
+.icon-orange{
+    color: var(--orange);
+}
+
+.btn.show,
+.btn.active{
+    border-color: var(--white);
+}
+
+
+
+/***************
+    ASIDE
+****************/
+aside{
+    height: calc(100vh - 70px);
+    width: 150px;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--darkblue);
+    background-image: url(img/sidebar-bg.png);
+    background-size: cover;
+}
+
+.icon-side{
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.choose div{
+    font-size: 15px;
+}
+
+@media screen and (max-width: 991.5px) {
+    aside{
+        width: 68px;
+    }
+}
+
+
+
+/***************
+      MAIN
+****************/
+main{
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    width: calc(100% - 150px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 991.5px) {
+    main{
+        width: calc(100% - 68px)
+    }
+}
+
+
+
+/************************
+    MAIN SECTION BLUE
+*************************/
+.blue{
+    background-color: var(--blue);
+}
+
+.blue .badge{
+    background-color: var(--shadow);
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.students{
+    font-size: 13px;
+}
+
+.offcanvas-header{
+    margin-top: 70px;
+}
+
+@media screen and (min-width: 0px) {
+    .offcanvas.offcanvas-end.off-canvas{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .offcanvas.offcanvas-end.off-canvas{
+        width: 40%;
+    }
+}
+
+
+
+/*************************
+    MAIN CARDS SECTION
+**************************/
+.coding{ /* cerchio salmon attorno a icona di prima tabella */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--salmon);
+    border-radius: 50%;
+}
+
+table{
+    white-space: nowrap;
+}
+
+/* distanziato elementi dentro card "Prossime classi" */
+.name-1{
+    width: 60%;
+}
+
+.start-2{
+    width: 15%;
+}
+
+.roi-3,
+.state-4{
+width: 5%;
+}
+
+.action-5{
+    width: 15%;
+}
+
+
+@media screen and (min-width: 0px) {
+    .invisibled{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .invisibled{
+        display:table-cell
+    }
+}
